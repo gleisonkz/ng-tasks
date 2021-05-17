@@ -29,3 +29,11 @@
 
   <button primary mat-stroked-button>Cadastrar</button>
 </form>
+
+<p>
+  Já possui uma conta?
+  <strong><a [routerLink]="['/sign-in']">Login</a></strong>
+</p>
+<p [routerLink]="['/home']" class="back-message">
+  <mat-icon>arrow_back</mat-icon> Voltar para home
+</p>

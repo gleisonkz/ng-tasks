@@ -24,3 +24,11 @@
 
   <button primary mat-stroked-button>Entrar</button>
 </form>
+
+<p>
+  Não possui uma conta?
+  <strong [routerLink]="['/sign-up']"><a>Cadastrar</a></strong>
+</p>
+<p [routerLink]="['/home']" class="back-message">
+  <mat-icon>arrow_back</mat-icon> Voltar para home
+</p>

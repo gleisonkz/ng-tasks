@@ -11,7 +11,7 @@
   flex-direction: column;
 
   h1 {
-    margin-top: rem(70);
+    margin-top: rem(35);
     font-size: rem(46);
     color: $color-title-on-background;
     margin-bottom: rem(70);
@@ -28,5 +28,10 @@ mat-form-field {
 
 button[primary] {
   width: 100%;
-  margin: 0;
+  margin: rem(0 0 20 0);
+}
+
+.back-message {
+  margin-top: rem(20);
+  @include flex-center;
 }
