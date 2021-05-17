@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Directive({
   selector: '[ngIfRoute]',
@@ -25,15 +25,18 @@ export class NgIfRouteDirective implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     this.subscription.add(
       this.router.events
-        .pipe(filter((event) => event instanceof NavigationEnd))
-        .subscribe((c: NavigationEnd) => {
-          const currentUrl = c.url.replace('/', '');
+        .pipe(
+          filter((event) => event instanceof NavigationEnd),
+          map((event) => event as NavigationEnd)
+        )
+        .subscribe((event) => {
+          const currentUrl = event.url.replace('/', '');
           const shouldHide = this.routes.includes(currentUrl);
           if (shouldHide) {
             this.viewContainer.clear();
-          } else {
-            this.viewContainer.createEmbeddedView(this.templateRef);
+            return;
           }
+          this.viewContainer.createEmbeddedView(this.templateRef);
         })
     );
   }
