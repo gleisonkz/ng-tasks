@@ -1,9 +1,10 @@
 @import 'variables';
 @import 'mixins';
 @import 'colors';
-@import 'material';
 @import 'media';
 @import 'theme';
+@import 'material';
+@import 'base';
 
 @include reset-css;
 

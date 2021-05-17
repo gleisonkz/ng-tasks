@@ -1,1 +1,33 @@
 //ARQUIVO UTILIZADO PARA CENTRALIZAR OS OVERRIDES DO MATERIAL
+@import 'functions';
+@import 'colors';
+
+.mat-form-field-appearance-outline
+  .mat-form-field-outline-thick
+  .mat-form-field-outline-start,
+.mat-form-field-appearance-outline
+  .mat-form-field-outline-thick
+  .mat-form-field-outline-end,
+.mat-form-field-appearance-outline
+  .mat-form-field-outline-thick
+  .mat-form-field-outline-gap,
+.mat-form-field-appearance-outline
+  .mat-form-field-outline
+  .mat-form-field-outline-start,
+.mat-form-field-appearance-outline
+  .mat-form-field-outline
+  .mat-form-field-outline-end,
+.mat-form-field-appearance-outline
+  .mat-form-field-outline
+  .mat-form-field-outline-gap {
+  border-width: 3px;
+}
+
+/* Border */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: $color-border;
+}
+/* Font color */
+input.mat-input-element {
+  color: $color-text-on-background;
+}

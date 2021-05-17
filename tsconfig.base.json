@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@front-end/pages": ["apps/frontend/src/app/pages/index.ts"],
+      "@front-end/assets": ["apps/frontend/src/assets"],
+      "@front-end/components": ["app/pages/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
