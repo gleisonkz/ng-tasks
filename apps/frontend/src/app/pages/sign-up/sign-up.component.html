@@ -1,6 +1,6 @@
 <h1>Cadastro.</h1>
 
-<button class="btn btn--google">
+<button mat-stroked-button class="btn btn--google">
   <img src="../../../assets//images/google-logo.png" alt="Logo da Google" />
   Continue com Google
 </button>
@@ -32,7 +32,7 @@
 
 <p>
   Já possui uma conta?
-  <strong><a [routerLink]="['/sign-in']">Login</a></strong>
+  <strong [routerLink]="['/sign-in']"><a>Login</a></strong>
 </p>
 <p [routerLink]="['/home']" class="back-message">
   <mat-icon>arrow_back</mat-icon> Voltar para home

@@ -17,7 +17,7 @@ button[mat-stroked-button].mat-stroked-button {
   }
 }
 
-.btn {
+button[mat-stroked-button].btn {
   &--google {
     img {
       margin-right: rem(10);
@@ -33,6 +33,7 @@ button[mat-stroked-button].mat-stroked-button {
     border: solid 3px $color-border;
     border-radius: $global-radius;
     width: 100%;
+    margin: 0;
     padding: 10px;
   }
 }
