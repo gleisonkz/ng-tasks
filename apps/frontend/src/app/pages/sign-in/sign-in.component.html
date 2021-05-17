@@ -1,0 +1,26 @@
+<h1>Login.</h1>
+
+<button class="btn btn--google">
+  <img src="../../../assets//images/google-logo.png" alt="Logo da Google" />
+  Continue com Google
+</button>
+
+<span class="separator">ou</span>
+
+<form [formGroup]="signInForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input
+      formControlName="email"
+      matInput
+      placeholder="Ex. john-doe@gmail.com"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Senha</mat-label>
+    <input formControlName="password" matInput type="password" />
+  </mat-form-field>
+
+  <button primary mat-stroked-button>Entrar</button>
+</form>
