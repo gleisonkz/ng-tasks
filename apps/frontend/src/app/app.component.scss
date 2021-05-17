@@ -1,9 +1,14 @@
 @import 'variables';
 @import 'mixins';
 @import 'colors';
+@import 'functions';
 @import 'material';
 @import 'media';
 @import 'theme';
+
+main {
+  padding: rem(30 20);
+}
 
 mat-toolbar {
   position: fixed;

@@ -1,11 +1,13 @@
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>
 
-<mat-toolbar class="toolbarNav">
-  <a mat-button>
+<mat-toolbar *ngIfRoute="['sign-in', 'sign-up']" class="toolbarNav">
+  <a routerLink="/sign-in" mat-button>
     <mat-icon>login</mat-icon>
     Login
   </a>
-  <a mat-button>
+  <a routerLink="/sign-up" mat-button>
     <mat-icon>person_add</mat-icon>
     Cadastro
   </a>
