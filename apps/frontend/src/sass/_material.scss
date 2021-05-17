@@ -31,3 +31,7 @@
 input.mat-input-element {
   color: $color-text-on-background;
 }
+
+mat-form-field {
+  width: 100% !important;
+}
