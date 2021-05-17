@@ -1,0 +1,23 @@
+@import 'mixins';
+@import 'functions';
+@import 'colors';
+
+button[mat-stroked-button].mat-stroked-button {
+  @include flex-center;
+  @include size(153, 56);
+  font-size: large;
+  border-radius: $global-radius;
+  color: $color-text-on-surface;
+
+  border: none;
+  width: 100%;
+  margin-bottom: rem(20);
+
+  &[primary] {
+    background-image: linear-gradient(to top right, $color-gradient);
+  }
+  &[secondary] {
+    background-image: none;
+    background-color: $color-secondary;
+  }
+}
