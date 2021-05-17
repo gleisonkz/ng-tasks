@@ -3,6 +3,7 @@
 @import 'colors';
 @import 'material';
 @import 'media';
+@import 'theme';
 
 @include reset-css;
 
@@ -18,11 +19,10 @@
   }
 }
 
-html,
-body {
-  height: 100%;
-}
 body {
   margin: 0;
   font-family: $font-primary;
+  background-color: $color-background;
+  color: $color-text-on-background;
+  position: relative;
 }
