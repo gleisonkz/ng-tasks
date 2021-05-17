@@ -1,34 +1,33 @@
-<h1>Login.</h1>
+<abstract-sign-in-up [title]="'Login'">
+  <ng-template #googleButton>
+    <google-button></google-button>
+  </ng-template>
 
-<button mat-stroked-button class="btn btn--google">
-  <img src="../../../assets//images/google-logo.png" alt="Logo da Google" />
-  Continue com Google
-</button>
+  <ng-template #formArea>
+    <form [formGroup]="signInForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          formControlName="email"
+          matInput
+          placeholder="Ex. john-doe@gmail.com"
+        />
+      </mat-form-field>
 
-<span class="separator">ou</span>
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input formControlName="password" matInput type="password" />
+      </mat-form-field>
 
-<form [formGroup]="signInForm">
-  <mat-form-field appearance="outline">
-    <mat-label>Email</mat-label>
-    <input
-      formControlName="email"
-      matInput
-      placeholder="Ex. john-doe@gmail.com"
-    />
-  </mat-form-field>
+      <custom-button text="Entrar"></custom-button>
+    </form>
+  </ng-template>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Senha</mat-label>
-    <input formControlName="password" matInput type="password" />
-  </mat-form-field>
-
-  <button primary mat-stroked-button>Entrar</button>
-</form>
-
-<p>
-  Não possui uma conta?
-  <strong [routerLink]="['/sign-up']"><a>Cadastrar</a></strong>
-</p>
-<p [routerLink]="['/home']" class="back-message">
-  <mat-icon>arrow_back</mat-icon> Voltar para home
-</p>
+  <ng-template #footer>
+    <p>
+      Não possui uma conta?
+      <strong [routerLink]="['/sign-up']"><a>Cadastrar</a></strong>
+    </p>
+    <back-button></back-button>
+  </ng-template>
+</abstract-sign-in-up>

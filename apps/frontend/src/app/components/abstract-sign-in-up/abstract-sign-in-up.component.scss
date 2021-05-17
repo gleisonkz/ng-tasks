@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+@import 'colors';
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-top: rem(35);
+    font-size: rem(46);
+    color: $color-title-on-background;
+    margin-bottom: rem(70);
+  }
+
+  &__separator {
+    margin: rem(20 0);
+  }
+
+  &__form {
+    form {
+      button[primary] {
+        width: 100%;
+        margin: rem(0 0 20 0);
+      }
+    }
+  }
+}
