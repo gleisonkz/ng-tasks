@@ -9,26 +9,27 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GoogleButtonComponent } from '@front-end/components';
-import { SignInPageComponent, SignUpPageComponent } from '@front-end/pages';
+import { HomePage, SignInPage, SignUpPage } from '@front-end/pages';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AbstractSignInUpComponent } from './components/abstract-sign-in-up/abstract-sign-in-up.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { ButtonComponent } from './components/button/button.component';
 import { NgIfRouteDirective } from './directives/ng-if-route.directive';
-import { HomePageComponent } from './pages/home/home.component';
+import { DashboardPage } from './pages/dashboard/dashboard.page';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
-    SignInPageComponent,
-    SignUpPageComponent,
+    HomePage,
+    SignInPage,
+    SignUpPage,
     NgIfRouteDirective,
     GoogleButtonComponent,
     BackButtonComponent,
     AbstractSignInUpComponent,
     ButtonComponent,
+    DashboardPage,
   ],
   imports: [
     BrowserModule,

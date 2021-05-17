@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss'],
+  templateUrl: './sign-in.page.html',
+  styleUrls: ['./sign-in.page.scss'],
 })
-export class SignInPageComponent implements OnInit {
+export class SignInPage implements OnInit {
   signInForm: FormGroup;
   ngOnInit(): void {
     this.signInForm = new FormGroup({

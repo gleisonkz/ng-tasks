@@ -17,6 +17,12 @@
         "@angular-eslint/component-selector": [
           "error",
           { "type": "element", "prefix": "", "style": "kebab-case" }
+        ],
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component", "Page"]
+          }
         ]
       }
     },

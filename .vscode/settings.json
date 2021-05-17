@@ -1,0 +1,12 @@
+{
+  "ngschematics.componentTypes": [
+    {
+      "label": "Element",
+      "options": [
+        ["changeDetection", "OnPush"],
+        ["viewEncapsulation", "ShadowDom"]
+      ],
+      "detail": "Component instanciated at runtime, like a dialog or modal"
+    }
+  ]
+}
