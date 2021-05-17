@@ -21,4 +21,8 @@ button[mat-stroked-button].btn {
     margin: 0;
     padding: 10px;
   }
+
+  ::ng-deep span.mat-button-wrapper {
+    display: flex;
+  }
 }
