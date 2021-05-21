@@ -1,14 +1,13 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './pages/home/home.component';
-import { SignInPageComponent } from './pages/sign-in/sign-in.component';
-import { SignUpPageComponent } from './pages/sign-up/sign-up.component';
+import { HomePage, SignInPage, SignUpPage } from '@front-end/pages';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomePageComponent },
-  { path: 'sign-in', component: SignInPageComponent },
-  { path: 'sign-up', component: SignUpPageComponent },
+  { path: 'home', component: HomePage },
+  { path: 'sign-in', component: SignInPage },
+  { path: 'sign-up', component: SignUpPage },
 ];
 
 @NgModule({
