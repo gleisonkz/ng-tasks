@@ -1,0 +1,13 @@
+@import 'functions';
+@import 'colors';
+
+:host {
+  text-align: center;
+}
+
+.no-data {
+  font-size: rem(30);
+  margin-top: rem(200);
+  margin-bottom: rem(50);
+  color: $color-title-on-background;
+}
