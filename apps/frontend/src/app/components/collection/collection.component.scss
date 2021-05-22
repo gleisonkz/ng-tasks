@@ -1,0 +1,39 @@
+@import 'colors';
+@import 'functions';
+@import 'mixins';
+
+mat-list-item.mat-list-item.item {
+  background-color: $color-surface;
+
+  border-radius: rem(24);
+  padding: rem(24);
+  height: auto;
+
+  ::ng-deep .mat-list-item-content {
+    padding: 0;
+  }
+
+  mat-icon {
+    @include size(30);
+    @include flex-center;
+  }
+
+  div[mat-line] {
+    padding: rem(2);
+  }
+
+  .icon-container {
+    background-color: rgb(210, 90, 97);
+    padding: rem(16);
+    border-radius: rem(16);
+  }
+
+  .title {
+    font-size: rem(20);
+    font-weight: 600;
+  }
+  .subtitle {
+    color: white;
+    opacity: 0.6;
+  }
+}
