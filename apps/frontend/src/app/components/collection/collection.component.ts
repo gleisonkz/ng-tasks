@@ -7,7 +7,7 @@ import { Collection } from 'apps/frontend/src/app/pages/collections/collections.
   template: `
     <mat-list>
       <mat-list-item class="item">
-        <mat-icon mat-list-icon class="icon-container">note</mat-icon>
+        <mat-icon mat-list-icon class="icon-container">folder</mat-icon>
         <div mat-line class="title">{{ collection?.title }}</div>
         <div mat-line class="subtitle">{{ quantityTasks }}</div>
       </mat-list-item>
