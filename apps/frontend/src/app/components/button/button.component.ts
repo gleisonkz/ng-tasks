@@ -12,6 +12,7 @@ import {
   template: `
     <ng-container [ngSwitch]="color">
       <button
+        [ngStyle]="{ 'border-radius': borderRadius + 'px' }"
         *ngSwitchCase="'primary'"
         primary
         mat-stroked-button
@@ -21,6 +22,7 @@ import {
         <ng-container [ngTemplateOutlet]="contentWrapper"></ng-container>
       </button>
       <button
+        [ngStyle]="{ 'border-radius': borderRadius + 'px' }"
         *ngSwitchCase="'secondary'"
         secondary
         mat-stroked-button
@@ -41,4 +43,5 @@ export class ButtonComponent {
   @Output() clickEvent = new EventEmitter<void>();
   @Input() color: 'primary' | 'secondary' = 'primary';
   @Input() hasBackgroundColor = true;
+  @Input() borderRadius = 0;
 }

@@ -5,6 +5,7 @@
 button[mat-stroked-button].mat-stroked-button {
   @include flex-center;
   @include size(153, 56);
+
   font-size: large;
   border-radius: $global-radius;
   color: $color-text-on-surface;
