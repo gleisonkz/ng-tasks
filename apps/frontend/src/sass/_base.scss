@@ -2,6 +2,10 @@
 @import 'functions';
 @import 'colors';
 
+h1 {
+  color: $color-title-on-background;
+}
+
 a[mat-stroked-button].mat-stroked-button,
 button[mat-stroked-button].mat-stroked-button {
   @include flex-center;

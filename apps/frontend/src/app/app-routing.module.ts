@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
-  DashboardPage,
+  CollectionsPage,
   HomePage,
   SignInPage,
   SignUpPage,
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomePage },
   { path: 'sign-in', component: SignInPage },
   { path: 'sign-up', component: SignUpPage },
-  { path: 'dashboard', component: DashboardPage },
+  { path: 'collections', component: CollectionsPage },
 ];
 
 @NgModule({

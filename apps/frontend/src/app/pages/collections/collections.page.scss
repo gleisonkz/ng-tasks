@@ -2,12 +2,23 @@
 @import 'colors';
 
 :host {
-  text-align: center;
+  height: 100%;
+}
+
+h1 {
+  margin-bottom: rem(30);
 }
 
 .no-data {
+  text-align: center;
   font-size: rem(30);
   margin-top: rem(200);
   margin-bottom: rem(50);
   color: $color-title-on-background;
+}
+
+.collections {
+  margin-bottom: rem(20);
+  display: grid;
+  gap: rem(16);
 }

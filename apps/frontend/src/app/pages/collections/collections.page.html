@@ -1,0 +1,18 @@
+<p *ngIf="!collections" class="no-data">
+  Você não tem <br />
+  nenhuma coleção
+</p>
+<h1 *ngIf="collections">Coleções</h1>
+<div class="collections">
+  <collection
+    [collection]="collection"
+    *ngFor="let collection of collections"
+  ></collection>
+</div>
+<custom-button
+  [borderRadius]="16"
+  [hasBackgroundColor]="false"
+  [color]="'secondary'"
+>
+  {{!collections ? "Criar Primeira":"Adicionar" + " Coleção"}}
+</custom-button>
