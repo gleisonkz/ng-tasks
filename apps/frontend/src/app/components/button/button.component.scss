@@ -20,4 +20,9 @@ button[mat-stroked-button].mat-stroked-button {
     background-image: none;
     background-color: $color-secondary;
   }
+
+  &.no-background {
+    background: transparent;
+    border: rem(3) solid $color-surface;
+  }
 }

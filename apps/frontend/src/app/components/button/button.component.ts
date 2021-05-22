@@ -15,6 +15,7 @@ import {
         *ngSwitchCase="'primary'"
         primary
         mat-stroked-button
+        [class.no-background]="!hasBackgroundColor"
         (click)="clickEvent.emit()"
       >
         <ng-container [ngTemplateOutlet]="contentWrapper"></ng-container>
@@ -23,6 +24,7 @@ import {
         *ngSwitchCase="'secondary'"
         secondary
         mat-stroked-button
+        [class.no-background]="!hasBackgroundColor"
         (click)="clickEvent.emit()"
       >
         <ng-container [ngTemplateOutlet]="contentWrapper"></ng-container>
@@ -38,4 +40,5 @@ export class ButtonComponent {
   @ContentChild('contentWrapper') contentWrapper: TemplateRef<unknown>;
   @Output() clickEvent = new EventEmitter<void>();
   @Input() color: 'primary' | 'secondary' = 'primary';
+  @Input() hasBackgroundColor = true;
 }

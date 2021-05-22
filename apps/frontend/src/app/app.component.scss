@@ -3,7 +3,6 @@
 @import 'colors';
 @import 'functions';
 @import 'material';
-@import 'media';
 @import 'theme';
 
 main {
@@ -17,6 +16,10 @@ mat-toolbar {
   width: 100%;
   display: flex;
   justify-content: space-around;
+
+  &.toolbarNav.mat-toolbar-single-row {
+    background-color: $color-surface;
+  }
 
   a {
     @include flex-center;
