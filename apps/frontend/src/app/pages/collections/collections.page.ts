@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 export interface Task {
+  id: string;
   text: string;
   isDone: boolean;
 }

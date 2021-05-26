@@ -2,10 +2,12 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +19,7 @@ import {
   GoogleButtonComponent,
 } from '@front-end/components';
 import {
+  CollectionDetailsPage,
   CollectionsPage,
   HomePage,
   SignInPage,
@@ -24,6 +27,7 @@ import {
 } from '@front-end/pages';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TaskItemComponent } from './components/task-item/task-item.component';
 import { NgIfRouteDirective } from './directives/ng-if-route.directive';
 
 @NgModule({
@@ -39,6 +43,8 @@ import { NgIfRouteDirective } from './directives/ng-if-route.directive';
     ButtonComponent,
     CollectionsPage,
     CollectionComponent,
+    CollectionDetailsPage,
+    TaskItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +57,9 @@ import { NgIfRouteDirective } from './directives/ng-if-route.directive';
     ReactiveFormsModule,
     MatInputModule,
     MatListModule,
+    MatMenuModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

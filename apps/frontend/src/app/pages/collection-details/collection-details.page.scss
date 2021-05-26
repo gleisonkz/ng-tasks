@@ -1,0 +1,35 @@
+@import 'functions';
+@import 'colors';
+@import 'mixins';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(48);
+
+  .title-back {
+    a {
+      margin-right: rem(20);
+    }
+    @include flex-center;
+  }
+}
+
+h2 {
+  font-size: rem(16);
+  color: $color-title-on-background;
+  font-weight: 500;
+  margin-bottom: rem(20);
+}
+
+a[mat-fab].mat-fab {
+  @include flex-center;
+  border-radius: rem(16);
+  @include size(48);
+  background-color: $color-surface;
+  color: white;
+}
+
+.tasks {
+  margin-bottom: rem(30);
+}
