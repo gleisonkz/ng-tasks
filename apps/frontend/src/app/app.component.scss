@@ -29,5 +29,9 @@ mat-toolbar {
     mat-icon {
       margin-right: rem(5);
     }
+
+    ::ng-deep .mat-button-wrapper {
+      @include flex-center;
+    }
   }
 }

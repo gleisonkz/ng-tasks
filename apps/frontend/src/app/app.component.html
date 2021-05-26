@@ -12,3 +12,14 @@
     Cadastro
   </a>
 </mat-toolbar>
+
+<mat-toolbar *ngIfRoute="['sign-in', 'sign-up', 'home']" class="toolbarNav">
+  <a routerLink="/collections" mat-button>
+    <mat-icon>dashboard</mat-icon>
+    Collections
+  </a>
+  <a routerLink="/account" mat-button>
+    <mat-icon>account_circle</mat-icon>
+    Perfil
+  </a>
+</mat-toolbar>
