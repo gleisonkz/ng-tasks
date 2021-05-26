@@ -5,6 +5,10 @@
 </p>
 
 <div class="buttons-wrapper">
-  <a primary [routerLink]="['/sign-up']" mat-stroked-button>Começar</a>
-  <a mat-stroked-button>Saiba Mais</a>
+  <custom-button [routerLink]="['/sign-up']" [borderRadius]="13"
+    >Começar</custom-button
+  >
+  <custom-button color="secondary" [borderRadius]="13"
+    >Saiba Mais</custom-button
+  >
 </div>
