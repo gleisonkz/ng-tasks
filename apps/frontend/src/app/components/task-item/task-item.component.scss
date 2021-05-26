@@ -1,0 +1,118 @@
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'colors';
+@import 'media';
+
+::ng-deep .mat-checkbox-frame {
+  border-color: white;
+}
+
+::ng-deep .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: $color-primary !important;
+  svg path {
+    fill: $color-primary !important;
+  }
+}
+
+::ng-deep .mat-checkbox-inner-container {
+  @include medias($tiny-mobile, $mobile) {
+    @include size-important(13);
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.task {
+  display: flex;
+  height: rem(76.56);
+  max-width: rem(500);
+  width: 100%;
+  background-color: $color-surface;
+  padding: rem(10 20);
+  margin: rem(10 0);
+  border-radius: $global-radius;
+
+  @include medias($tiny-mobile, $mobile, $small-tablet) {
+    @include flex-center;
+    height: rem(60);
+    width: 100%;
+  }
+
+  @include small-tablet {
+    max-width: none;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__mode-container {
+    width: 100%;
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+
+  mat-icon {
+    @include tiny-mobile {
+      font-size: rem(20);
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    margin-right: rem(10);
+    overflow: hidden;
+  }
+
+  &__text {
+    display: block;
+
+    user-select: none;
+    font-size: rem(16);
+    color: white;
+    align-items: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    transition: color 0.3s;
+
+    &--edit {
+      margin-left: rem(10);
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &--delete {
+      &:hover {
+        color: red;
+      }
+    }
+
+    & + & {
+      margin-left: rem(10);
+    }
+  }
+}

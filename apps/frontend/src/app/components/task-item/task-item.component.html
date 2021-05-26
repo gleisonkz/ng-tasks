@@ -1,0 +1,38 @@
+<div class="task">
+  <form [formGroup]="formGroup" class="task__form" [ngSwitch]="currentMode">
+    <mat-checkbox
+      #checkbox
+      (change)="save(false)"
+      formControlName="isDone"
+      class="task__checkbox"
+    >
+      <span
+        [ngClass]="{ done: checkbox.checked }"
+        class="task__text"
+        *ngSwitchCase="'show'"
+      >
+        {{ taskControl.value }}
+      </span>
+    </mat-checkbox>
+
+    <div class="task__mode-container" *ngSwitchCase="'edit'">
+      <mat-form-field>
+        <input
+          #taskInput
+          KeyPressListener
+          (EnterKeyPress)="save()"
+          (EscKeyPress)="changeMode()"
+          [formControl]="taskControl"
+          matInput
+        />
+      </mat-form-field>
+    </div>
+  </form>
+
+  <button (click)="edit()" class="task__btn task__btn--edit">
+    <mat-icon>{{ currentMode === 'edit' ? 'check' : 'edit' }}</mat-icon>
+  </button>
+  <button (click)="delete.emit(task.id)" class="task__btn task__btn--delete">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
